@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Focero Focus Timer</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="brand-row">
+        <div>
+          <p class="eyebrow">FOCERO</p>
+          <h1>Focus Timer</h1>
+        </div>
+        <span class="phase-chip" id="phaseChip">Focus</span>
+      </header>
+
+      <section class="timer-card" aria-live="polite">
+        <div class="progress-ring" id="progressRing">
+          <div class="time-readout" id="timeReadout">25:00</div>
+        </div>
+        <p class="session-label" id="sessionLabel">Classic 25/5 · Session 1</p>
+      </section>
+
+      <section class="preset-grid" aria-label="Timer presets">
+        <button class="preset-button active" data-preset="classic" type="button">
+          <span>25/5</span>
+          <small>Classic</small>
+        </button>
+        <button class="preset-button" data-preset="deep" type="button">
+          <span>50/10</span>
+          <small>Deep</small>
+        </button>
+        <button class="preset-button" data-preset="custom" type="button">
+          <span>Custom</span>
+          <small>Minutes</small>
+        </button>
+      </section>
+
+      <section class="custom-panel" id="customPanel" hidden>
+        <label>
+          Focus
+          <input id="focusMinutes" min="1" max="180" type="number" value="25">
+        </label>
+        <label>
+          Break
+          <input id="breakMinutes" min="1" max="180" type="number" value="5">
+        </label>
+        <button class="small-button" id="saveCustomButton" type="button">Save</button>
+      </section>
+
+      <section class="controls" aria-label="Timer controls">
+        <button class="primary-button" id="startPauseButton" type="button">Start</button>
+        <button class="icon-button" id="resetButton" title="Reset timer" type="button">Reset</button>
+        <button class="icon-button" id="skipButton" title="Skip to next phase" type="button">Skip</button>
+      </section>
+
+      <footer class="footer-row">
+        <p id="todayCount">Today · 0 focus sessions</p>
+        <a href="https://focero.com/virtual-study-room/?source=edge-addon" rel="noopener noreferrer" target="_blank">
+          Open focus room
+        </a>
+      </footer>
+    </main>
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>
