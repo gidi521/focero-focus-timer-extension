@@ -1,2 +1,5 @@
-# focero-focus-timer-extension
-Focero Focus Timer browser extension for Pomodoro focus sessions.
+# Focero Focus Timer Extension
+
+A simple Pomodoro focus timer extension for Microsoft Edge.
+
+Website: https://focero.com/
